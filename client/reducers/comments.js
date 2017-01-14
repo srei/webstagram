@@ -9,9 +9,8 @@ function postComments(state=[], action ){
 			}];
 		case 'REMOVE_COMMENT':
 			return [
-			//from start to where we want to delet
+			// take comments from start to where we want to delete the comments
 				...state.slice(0, action.i),
-				//after deletd one, to the end
 				...state.slice(action.i + 1)
 			]
 		default:
@@ -24,9 +23,7 @@ function postComments(state=[], action ){
 function comments(state=[], action ){
 	if(typeof action.postId !== undefined){
 		return {
-			//TAKE CURERNT STATE
 			...state,
-			//overwrite this post w/ a new one
 			[action.postId]: postComments(state[action.postId], action)
 		}
 	}
@@ -35,4 +32,3 @@ function comments(state=[], action ){
 
 export default comments;
 
-//reducer does the editing of state

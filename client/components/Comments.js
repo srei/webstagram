@@ -13,7 +13,7 @@ const Comments = React.createClass({
 		)
 	},
 	handleSubmit(e){
-		//prevents page from refreshing when you press submit
+		// prevents page from refreshing when you press submit
 		e.preventDefault();
 		const { postId}  = this.props.params;
 		const author = this.refs.author.value;
@@ -26,6 +26,7 @@ const Comments = React.createClass({
 		return(
 			<div className="comments">
 				{this.props.postComments.map(this.renderComment)}
+				
 				<form ref="commentForm" className="commentForm" onSubmit={this.handleSubmit}>
 					<input type="text" ref="author" placeholder="author"/>
 					<input type="text" ref="comment" placeholder="comment" />
@@ -37,5 +38,3 @@ const Comments = React.createClass({
 });
 
 export default Comments;
-
-//when you want to reference a dom element (which is not always done in react). you can do it w/ a REF

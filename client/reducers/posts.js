@@ -17,11 +17,3 @@ function posts(state=[], action ){
 }
 
 export default posts;
-
-
-//in redux you can only really have ONE reducer, so when you split up the reducers like we did here (into posts and comments) you have to link it back to a 'ROOT reducer'
-//
-//
-//
-//
-//pure func = predictable function

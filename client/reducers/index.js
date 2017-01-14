@@ -10,7 +10,6 @@ import posts from './posts';
 import comments from './comments';
 
 
-//this is the ROOT reducer, and you are combining them using the combineReducers method from redux.
 const rootReducer = combineReducers({
 	posts,
 	comments,
