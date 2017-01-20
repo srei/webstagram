@@ -1,7 +1,7 @@
 // import {createStore, compose} from 'redux';
+import { createStore } from 'redux';
 
-import {createStore, dispatchLogger} from 'seedux';
-
+import { dispatchLogger, seeduxInit } from 'seedux';
 
 import {applyMiddleware} from 'redux';
 
@@ -27,6 +27,9 @@ const defaultState = {
 }
 
 const store = createStore(rootReducer, defaultState, applyMiddleware(dispatchLogger));
+
+// seeduxInit(store);
+
 
 export const history = syncHistoryWithStore(browserHistory, store);
 

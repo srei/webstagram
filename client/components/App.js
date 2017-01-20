@@ -1,6 +1,6 @@
 // import {bindActionCreators} from 'redux';
 
-import {bindActionCreators} from 'seedux';
+import { bindActionCreators } from 'seedux';
 
 // import {connect} from 'react-redux';
 import { connect } from 'seedux';
